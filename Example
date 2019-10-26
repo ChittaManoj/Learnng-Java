@@ -1,0 +1,79 @@
+Java Tutorial for Beginners | Crash Course
+_____________________________________________________________________
+
+public class Exams
+{
+    public static void main(String[] args)
+    {
+      System.out.println("Hello World");
+    }
+}
+_____________________________________________________________________
+
+Source file > Compiler > Bitecode > JVM
+_____________________________________________________________________
+
+public class Exams
+{
+    public static void main(String[] args)
+    {
+        int i =4;
+        char k = 'B';
+        double l = 8.8;
+        float j = 5.5;
+        
+        System.out.println(i);
+    }
+}
+_____________________________________________________________________
+public class exams {
+
+    String subject;
+    int marks;
+
+    exams (String name, int total){
+
+        this.subject = name;
+        this.marks = total;
+    };
+    public static void main (String args[]){
+        exams obj1 = new exams ("scince", 74);
+        exams obj2 = new exams("chemistry", 75);
+
+        System.out.println (obj1.subject+" "+obj1.marks);
+        System.out.println (obj2.subject+" "+obj2.marks);
+    }
+}
+
+_____________________________________________________________________
+
+final class A
+{
+    final int i = 100;
+    public final void show ()
+    {
+        i = 333;            // Can not alter the value of "i" as it is declared as fianl
+        System.out.println("Show in A");
+    }
+}
+
+class B extends A       //Can not extend class A, as it is declared as Final
+{
+    public void show ()     //Can nor override method as it is declared as Final
+    {
+        System.out.println("Show in B");
+    }
+
+}
+
+
+public class Exams
+{
+    public static void main(String[] args)
+    {
+        A obj = new B();
+        obj.show();
+    }
+}
+
+_____________________________________________________________________
