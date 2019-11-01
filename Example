@@ -13,67 +13,601 @@ _____________________________________________________________________
 Source file > Compiler > Bitecode > JVM
 _____________________________________________________________________
 
+public class VariableDemo 
+{
+	public static void main(String args[])
+	{
+//		int,float, double
+		
+		long l = 5000000000l;  // 8 bytes
+		int i = 5;            // 4 bytes -> 32 bits
+		short s = 5;         // 2 bytes -> 16 bits -> -32768 to 32767
+		byte b = 5;         // 1 byte -> 8 bits -> -128 to 127
+		float f = 5.5f;
+		double d = 5.5;
+		
+		char c ='A';
+		c = 66;  // American Standard code for information interchange
+		
+		System.out.println(c);
+		
+		double d1 = 5;    // implicit conversion
+		int k =(int)5.6; // type casting
+		System.out.println(k);
+		
+	}
+}
+
+
+Byte> Shorrt & Char > Int > long > float > Double
+_____________________________________________________________________
+
+Naming Convetion
+
+Class -->  noun (ex: Exam, MyFirstJavaClass(Camle casing Rule))
+Mthod --> Verb (ex:copy)
+Variable --> (ex: id)
+Constent --> (ex: PI, MAX_PRICE)
+Constructor --> Exam() (No parameters in the brackets)
+
+_____________________________________________________________________
+
+public class OperatorDemo {
+	
+  /*
+   * 
+   *  Arithmetic +,-,*,/,%
+   *  Bitwise
+   *  Relational
+   *  Logical
+   * 
+   */
+	
+	public static void main(String args[])
+	{
+		int m=6,n=4;
+		int r1 = m+n;   // 8
+		int r2 = m-n;   // 4
+		int r3 = m*n;   // 12
+		double r4 = (double)m/n;   // 3
+		
+		int r5 = m%n;
+		
+		System.out.println(r1);
+		System.out.println(r2);
+		System.out.println(r3);
+		System.out.println(r4);
+		System.out.println(r5);
+	}
+
+}
+_____________________________________________________________________
+public class OperatorDemo {
+	
+
+	public static void main(String args[])
+	{
+
+		int m = 4;
+		int n = 5;
+		
+//		n += m; // n = n+m
+//		n++;   // n = n+1
+//	
+//		++n; // pre increment
+//		n++; // post increment
+		
+		m = ++n;
+		
+		System.out.println(m);
+		System.out.println(n);
+	}
+}
+_____________________________________________________________________
+
+public class SelectionDemo 
+{
+    public static void main(String args[])
+    {
+
+        int n = 5;
+
+        if(n==0)
+        {
+            System.out.print("nothing");
+            System.out.print("Bye");
+        }
+        else if(n%2==0)
+        {
+            System.out.print("Even");
+        }
+        else
+        {
+            System.out.print("Odd");
+        }
+
+    }
+}
+_____________________________________________________________________
+
+public class SelectionDemo 
+{
+	// ternary operator
+		
+	public static void main(String args[])
+	{
+		int i = 5;		
+		int j = 0;
+	
+//		if(i>6)
+//			j=1;
+//		else
+//			j=2;
+	
+		j = i>6?1:2;		// ?: -> condition?expr1:expr2
+		
+		System.out.println(j);
+	}
+}
+
+_____________________________________________________________________
+
+public class SelectionDemo 
+{
+// Switch Statement
+	
+	public static void main(String args[])
+	{
+		
+		int n = 6;
+		
+		switch(n)
+		{
+		case 1:
+			System.out.println("One");
+			break;
+		case 2:
+			System.out.println("Two");
+			break;
+		case 3:
+			System.out.println("Three");
+			break;
+		case 4:
+			System.out.println("Four");
+			break;
+		case 5:
+			System.out.println("Five");
+			break;
+		default:
+			System.out.println("No Match");
+		}
+	}
+}
+
+_____________________________________________________________________	
+		
+public class SelectionDemo 
+{
+// Can use sting in Switch Statement for jave version more than 1.7
+	
+	public static void main(String args[])
+	{
+		String d = "abc";
+		
+		switch(d)
+		{
+		case "abc":
+			System.out.println("One");
+			break;
+	    case "pqr":
+	    	System.out.println("Two");
+	    	break;
+	    	
+	    default:
+	    	System.out.println("No Match");
+		}
+
+    }
+}
+_____________________________________________________________________
+
+public class iterationDemo 
+{
+	public static void main(String args[])
+	{
+//while loop		
+		int i=1;
+		while(i<=5)
+		{
+			System.out.println("Hello");
+			i++;
+		}
+	}
+}	
+
+_____________________________________________________________________
+
+public class iterationDemo 
+{
+	public static void main(String args[])
+	{
+		
+//do while loop
+		
+		int i=9;
+		do
+		{
+			System.out.println("Hello");
+			i++;
+		}while(i<=5);
+	}
+
+}
+_____________________________________________________________________
+public class iterationDemo 
+{
+	public static void main(String args[])
+	{
+		
+//for loop
+		
+		for(int i=1;i<=5;i++)
+		{
+			System.out.println("Hello");
+		}
+	}
+}
+
+_____________________________________________________________________
+
+public class iterationDemo 
+{
+	//Nested for
+	
+		public static void main(String args[])
+		{
+			for(int i=1;i<=4;i++)
+			{
+				for(int j=1;j<=4;j++)
+				{
+					System.out.print("* ");
+				}
+				System.out.println();
+		    }
+
+		}
+		
+}
+
+_____________________________________________________________________
+
+public class iterationDemo 
+{
+	//Nested for
+	
+		public static void main(String args[])
+		{
+			for(int i=1;i<=4;i++)
+			{
+				for(int j=1;j<=4;j++)
+				{
+					System.out.print(j + " ");
+				}
+				System.out.println();
+		    }
+	     }
+}
+_____________________________________________________________________
+Answer for assignment would be
+
+class Pattern
+{
+    public static void main (String Args[])
+    {
+        for(int i=0; i<=3; i++)
+        {           
+            for(; i>=1 && i<=2; i++)
+            {
+                System.out.println("$     $");
+            }
+            System.out.println("$ $ $ $");
+        }
+    }
+}
+
+_____________________________________________________________________
+
+public class JumpDemo 
+{
+
+	public static void main(String[] args)
+	{
+//Continue
+		for(int i=1;i<=10;i++)
+			if(i==7) 
+			{
+				continue;
+			}
+			System.out.println("value is " + i);
+
+	}
+}
+
+_____________________________________________________________________		
+public class JumpDemo 
+{
+
+	public static void main(String[] args)
+	{			
+//Break
+	for(int i=1;i<=10;i++)
+	{
+		if(i>5) 
+		{
+			break;
+		}
+		System.out.println("value is " +  i);
+	}
+}
+}
+_____________________________________________________________________
+
+class Calc
+{
+	int num1;
+	int num2;
+	int result;
+	
+    public void perform()
+	{
+		result = num1 + num2;
+	}
+}
+
+public class ObjectDemo 
+{
+	public static void main(String[] args)
+	{
+		Calc obj = new Calc(); //knows something and does somthing
+		obj.num1 = 3;
+		obj.num2 = 5;
+		
+		obj.perform();
+		
+		System.out.println(obj.result);
+	}
+}
+
+_____________________________________________________________________
+
+class Calc
+{
+	int num1;
+	int num2;
+	int result;
+	
+	public Calc()
+	{
+		num1 = 5;
+		num2 = 5;
+		System.out.println("in constructor");
+	}
+	public Calc(int n)
+	{
+		num1 = n;
+		num2 = n;
+	}
+	public Calc(double d,int n)
+	{
+		num1 = (int) d;
+		num2 = n;
+	}
+	
+}
+
+public class ObjectDemo 
+{
+	public static void main(String[] args)
+	{
+		Calc obj = new Calc(9.5,8); //Constructor
+		
+		System.out.println(obj.num1);
+
+	}
+}
+
+_____________________________________________________________________
+
+_____________________________________________________________________
+
+class Calc
+{
+    int num1;
+    int num2;		// Instance Variables
+    int result;		
+
+    public Calc(int num1,int num2)
+    {
+        this.num1 = num1; // Local Variables
+        this.num2 = num2; //This represents current object
+    }
+
+}
+
 public class Exams
 {
     public static void main(String[] args)
     {
-        int i =4;
-        char k = 'B';
-        double l = 8.8;
-        float j = 5.5;
-        
-        System.out.println(i);
+        Calc obj = new Calc(4,5); //Constructor
+
+        System.out.println(obj.num1);
+        System.out.println(obj.num2);
+
     }
 }
 _____________________________________________________________________
-public class exams {
 
-    String subject;
-    int marks;
+class Casio
+{
+	int num1;
+	int num2;
+	String operation;
 
-    exams (String name, int total){
+	
+	public void add(int i , int j) 
+	{
+		System.out.println(i + j);
+	}
+	public void add(int i , int j , int k) 
+	{
+		System.out.println(i + j + k);
+	}
+	public void add(double i, double j) 
+	{
+		System.out.println(i + j);
+	}
+}
 
-        this.subject = name;
-        this.marks = total;
-    };
-    public static void main (String args[]){
-        exams obj1 = new exams ("scince", 74);
-        exams obj2 = new exams("chemistry", 75);
 
-        System.out.println (obj1.subject+" "+obj1.marks);
-        System.out.println (obj2.subject+" "+obj2.marks);
-    }
+public class MethodOverloadingDemo 
+{
+	public static void main(String[] args)
+	{
+
+		obj.add(5, 2);
+		
+		obj.add(4, 3,5);
+		
+		obj.add(4.5, 3.8);
+	}
+
 }
 
 _____________________________________________________________________
 
-final class A
+class Casio
 {
-    final int i = 100;
-    public final void show ()
-    {
-        i = 333;            // Can not alter the value of "i" as it is declared as fianl
-        System.out.println("Show in A");
-    }
+	int num1;
+	int num2;
+	String operation;
+	
+	public Casio()
+	{
+		num1 = 0;
+		num2 = 0;
+		operation = "Nothing";
+	}
+	public Casio(int i)
+	{
+		num1 = i;
+		num2 = 0;
+		operation = "Nothing";
+	}
+	public Casio(int i,int j,String op)
+	{
+		num1 = i;
+		num2 = j;
+		operation = op;
+	}
 }
+	
 
-class B extends A       //Can not extend class A, as it is declared as Final
+
+public class MethodOverloadingDemo 
 {
-    public void show ()     //Can nor override method as it is declared as Final
-    {
-        System.out.println("Show in B");
-    }
+	public static void main(String[] args)
+	{
+		Casio obj = new Casio(4,5,"Add");	
+	}
 
-}
-
-
-public class Exams
-{
-    public static void main(String[] args)
-    {
-        A obj = new B();
-        obj.show();
-    }
 }
 
 _____________________________________________________________________
+
+class Emp
+{
+	int eid;
+	int salary;
+	static String ceo;
+
+	public Emp()  // when you create an object
+	{
+		eid = 1;
+		salary = 3000;
+		System.out.println("in constructor");
+	}
+
+	public void show()
+	{
+		System.out.println(eid + " : " + salary + " : " + ceo);
+	}
+}
+
+public class StaticDemo
+{
+
+	public static void main(String[] args)
+	{
+		
+		Emp navin = new Emp();
+		navin.eid = 8;
+		navin.salary = 4000;
+		Emp.ceo = "Mahesh";
+	
+		Emp rahul = new Emp();
+		rahul.eid = 9;
+		rahul.salary = 5000;
+		Emp.ceo = "Mahesh";   // we dont need object but the class name
+		
+		Emp.ceo = "Nikita";		// It over rides ceo for Naveen too
+		
+		navin.show();
+		rahul.show();
+	}
+
+}
+_____________________________________________________________________
+
+class Emp
+{
+	int eid;
+	int salary;
+	static String ceo;
+
+	static    // when you load a class
+	{
+		ceo = "Larry";
+		System.out.println("in static");		//Static Block gets executed only when class is loaded and it's only once
+	}
+	
+	public Emp()  // when you create an object
+	{
+		eid = 1;
+		salary = 3000;
+		System.out.println("in constructor");	//Sequence of Static block doesn't matter, unless there are more than one static block
+	}
+	
+	public void show()
+	{
+		System.out.println(eid + " : " + salary + " : " + ceo);
+	}
+}
+
+public class StaticDemo
+{
+	static int i = 0;
+	public static void main(String[] args)	// Class loads first>Method Loads second>variables in method loads third
+	{
+		i = 9;								// Variable can not be called inside static method unless it is a static variable
+		
+		Emp navin = new Emp();
+
+		Emp rahul = new Emp();
+		
+		navin.show();
+		rahul.show();
+	}
+
+}
+_____________________________________________________________________
+
